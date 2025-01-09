@@ -6,6 +6,15 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import WebDevelopment from './pages/services/WebDevelopment';
+import ERPCRM from './pages/services/ERPCRM';
+import CloudSolutions from './pages/services/CloudSolutions';
+import TechnologyConsulting from './pages/services/TechnologyConsulting';
+import DigitalTransformation from './pages/services/DigitalTransformation';
+import DesignServices from './pages/services/DesignServices';
+// import ECommerce from './pages/services/ECommerce';
+// import SEODigitalMarketing from './pages/services/SEODigitalMarketing';
+// import CustomDevelopment from './pages/services/CustomDevelopment';
 
 function App() {
   return (
@@ -18,6 +27,15 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/services/web-development" element={<WebDevelopment />} />
+            <Route path="/services/erp-crm" element={<ERPCRM />} />
+            <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
+            <Route path="/services/technology-consulting" element={<TechnologyConsulting />} />
+            <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+            <Route path="/services/design-services" element={<DesignServices />} />
+            {/* <Route path="/services/e-commerce" element={<ECommerce />} />
+            <Route path="/services/seo-digital-marketing" element={<SEODigitalMarketing />} />
+            <Route path="/services/custom-development" element={<CustomDevelopment />} /> */}
           </Routes>
         </main>
         <Footer />

@@ -1,21 +1,19 @@
 import React from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = React.useState(false);
   const location = useLocation();
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
@@ -26,7 +24,7 @@ const Navigation = () => {
               <span className="text-2xl font-bold text-blue-600">NexoraWave</span>
             </Link>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -41,11 +39,100 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+
+            {/* Services Navigation with Dropdown */}
+            <div className="relative">
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/services"
+                  className={`${
+                    isActive('/services')
+                      ? 'text-blue-600 border-b-2 border-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                >
+                  Services
+                </Link>
+                <button
+                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                  className="text-gray-700 hover:text-blue-600"
+                >
+                  <ChevronDown size={16} />
+                </button>
+              </div>
+              {isServicesDropdownOpen && (
+                <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg w-48 py-2 z-10">
+                  <Link
+                    to="/services/web-development"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Web Development
+                  </Link>
+                  <Link
+                    to="/services/erp-crm"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    ERP & CRM Systems
+                  </Link>
+                  <Link
+                    to="/services/cloud-solutions"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Cloud Solutions
+                  </Link>
+                  <Link
+                    to="/services/technology-consulting"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Technology Consulting
+                  </Link>
+                  <Link
+                    to="/services/digital-transformation"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Digital Transformation
+                  </Link>
+                  <Link
+                    to="/services/design-services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Design Services
+                  </Link>
+                  <Link
+                    to="/services/e-commerce"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    E-Commerce Solutions
+                  </Link>
+                  <Link
+                    to="/services/seo-digital-marketing"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    SEO & Digital Marketing
+                  </Link>
+                  <Link
+                    to="/services/custom-development"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Custom Development
+                  </Link>
+                  <span className="block px-4 py-2 text-gray-400">
+                    App Development (Coming Soon)
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Get Started Button */}
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
+          {/* Mobile Menu */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -57,27 +144,40 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`${
-                  isActive(item.href)
-                    ? 'bg-blue-50 text-blue-600'
-                    : 'text-gray-700 hover:bg-gray-50'
-                } block px-3 py-2 rounded-md text-base font-medium`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
-              Get Started
+        <div className="md:hidden px-4 pb-3">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`block ${
+                isActive(item.href)
+                  ? 'text-blue-600'
+                  : 'text-gray-700 hover:text-blue-600'
+              } py-2`}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <div className="py-2">
+            <button
+              onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+              className="text-gray-700 hover:text-blue-600 flex items-center w-full"
+            >
+              Services <ChevronDown className="ml-2" size={16} />
             </button>
+            {isServicesDropdownOpen && (
+              <div className="pl-4 mt-2">
+                <Link
+                  to="/services/web-development"
+                  className="block text-gray-700 hover:bg-gray-50 py-1 rounded"
+                >
+                  Web Development
+                </Link>
+                {/* Other services */}
+              </div>
+            )}
           </div>
         </div>
       )}
