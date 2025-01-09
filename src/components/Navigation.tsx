@@ -125,7 +125,7 @@ const Navigation = () => {
 
             {/* Get Started Button */}
             <Link
-              to="/contact"
+              to="/get-started"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
             >
               Get Started

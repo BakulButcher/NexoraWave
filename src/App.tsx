@@ -12,6 +12,7 @@ import CloudSolutions from './pages/services/CloudSolutions';
 import TechnologyConsulting from './pages/services/TechnologyConsulting';
 import DigitalTransformation from './pages/services/DigitalTransformation';
 import DesignServices from './pages/services/DesignServices';
+import GetStarted from './pages/GetStarted';
 // import ECommerce from './pages/services/ECommerce';
 // import SEODigitalMarketing from './pages/services/SEODigitalMarketing';
 // import CustomDevelopment from './pages/services/CustomDevelopment';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/get-started" element={<GetStarted />} />
             <Route path="/services/web-development" element={<WebDevelopment />} />
             <Route path="/services/erp-crm" element={<ERPCRM />} />
             <Route path="/services/cloud-solutions" element={<CloudSolutions />} />

@@ -70,7 +70,6 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-600 to-purple-600 opacity-90" />
@@ -166,6 +165,14 @@ const Home = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300"
+            >
+              See More Services
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -200,7 +207,7 @@ const Home = () => {
                 <div className="flex items-center mb-6">
                   <img
                     src={testimonial.image}
-                    alt={testimonial.name}
+                    alt={`Photo of ${testimonial.name}`}
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
                   <div>
