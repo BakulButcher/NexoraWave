@@ -13,9 +13,9 @@ import TechnologyConsulting from './pages/services/TechnologyConsulting';
 import DigitalTransformation from './pages/services/DigitalTransformation';
 import DesignServices from './pages/services/DesignServices';
 import GetStarted from './pages/GetStarted';
-// import ECommerce from './pages/services/ECommerce';
-// import SEODigitalMarketing from './pages/services/SEODigitalMarketing';
-// import CustomDevelopment from './pages/services/CustomDevelopment';
+import ECommerce from './pages/services/ECommerce';
+import SEODigitalMarketing from './pages/services/SEODigitalMarketing';
+import CustomDevelopment from './pages/services/CustomDevelopment';
 
 function App() {
   return (
@@ -35,9 +35,9 @@ function App() {
             <Route path="/services/technology-consulting" element={<TechnologyConsulting />} />
             <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
             <Route path="/services/design-services" element={<DesignServices />} />
-            {/* <Route path="/services/e-commerce" element={<ECommerce />} />
+            <Route path="/services/e-commerce" element={<ECommerce />} />
             <Route path="/services/seo-digital-marketing" element={<SEODigitalMarketing />} />
-            <Route path="/services/custom-development" element={<CustomDevelopment />} /> */}
+            <Route path="/services/custom-development" element={<CustomDevelopment />} />
           </Routes>
         </main>
         <Footer />

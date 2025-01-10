@@ -24,16 +24,16 @@ const Services: React.FC = () => {
       title: 'Logo Designing',
       description: 'Professional logo design services to create a unique brand identity for you.',
     },
-    {
-      icon: Code,
-      title: 'ERP & CRM Systems',
-      description: 'Streamline business operations with customized ERP & CRM solutions.',
-    },
-    {
-      icon: Code,
-      title: 'Cloud Solutions',
-      description: 'Leverage the power of cloud computing for scalability and efficiency.',
-    },
+    // {
+    //   icon: Code,
+    //   title: 'ERP & CRM Systems',
+    //   description: 'Streamline business operations with customized ERP & CRM solutions.',
+    // },
+    // {
+    //   icon: Code,
+    //   title: 'Cloud Solutions',
+    //   description: 'Leverage the power of cloud computing for scalability and efficiency.',
+    // },
     {
       icon: Code,
       title: 'Technology Consulting',
@@ -49,14 +49,15 @@ const Services: React.FC = () => {
       title: 'SEO & Digital Marketing',
       description: 'Boost your online presence with SEO and marketing strategies.',
     },
-    {
-      icon: Code,
-      title: 'E-Commerce Solutions',
-      description: 'Comprehensive solutions for your online store and business.',
-    },
+    // 
+    // {
+    //   icon: Code,
+    //   title: 'E-Commerce Solutions',
+    //   description: 'Comprehensive solutions for your online store and business.',
+    // },
   ];
 
-  const [visibleServices, setVisibleServices] = useState(6);
+  const [visibleServices, setVisibleServices] = useState(3);
 
   const showMoreServices = () => {
     setVisibleServices(visibleServices + 6);

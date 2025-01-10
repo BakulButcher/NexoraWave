@@ -69,18 +69,6 @@ const Navigation = () => {
                     Web Development
                   </Link>
                   <Link
-                    to="/services/erp-crm"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    ERP & CRM Systems
-                  </Link>
-                  <Link
-                    to="/services/cloud-solutions"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Cloud Solutions
-                  </Link>
-                  <Link
                     to="/services/technology-consulting"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
@@ -116,6 +104,19 @@ const Navigation = () => {
                   >
                     Custom Development
                   </Link>
+                  <Link
+                    to="/services/erp-crm"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  ></Link>
+                    <span className="block px-4 py-2 text-gray-400">
+                    ERP & CRM Systems (Coming Soon)
+                    </span>
+                  
+                  <Link
+                    to="/services/cloud-solutions"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  ></Link>
+                    <span className="block px-4 py-2 text-gray-400">Cloud Solutions (Coming Soon)</span>
                   <span className="block px-4 py-2 text-gray-400">
                     App Development (Coming Soon)
                   </span>

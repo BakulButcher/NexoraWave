@@ -42,29 +42,29 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '100+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '15+', label: 'Expert Developers' },
-    { number: '5+', label: 'Years Experience' },
+    { number: '2+', label: 'Projects Completed' },
+    { number: '2+', label: 'Happy Clients' },
+    { number: '3+', label: 'Expert Developers' },
+    { number: '1+', label: 'Years Experience' },
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
-      quote:
-        'NexoraWave transformed our business with their exceptional web development services.',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Founder, AppVision',
+      name: 'Riddhi Pattani',
+      role: 'CEO, Rveechi',
       image:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
       quote:
-        'Their mobile app development expertise helped us launch a successful product.',
+        'NexoraWave transformed our business with their exceptional web development services.',
     },
+    // {
+    //   name: 'Michael Chen',
+    //   role: 'Founder, AppVision',
+    //   image:
+    //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
+    //   quote:
+    //     'Their mobile app development expertise helped us launch a successful product.',
+    // },
   ];
 
   return (
@@ -205,11 +205,11 @@ const Home = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-xl">
                 <div className="flex items-center mb-6">
-                  <img
+                  {/* <img
                     src={testimonial.image}
                     alt={`Photo of ${testimonial.name}`}
                     className="w-16 h-16 rounded-full object-cover mr-4"
-                  />
+                  /> */}
                   <div>
                     <div className="font-bold">{testimonial.name}</div>
                     <div className="text-gray-600">{testimonial.role}</div>

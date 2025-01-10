@@ -537,12 +537,12 @@ const Contact = () => {
                     <option value="Web Development">Web Development</option>
                     <option value="Custom Software">Custom Software</option>
                     <option value="Logo Designing">Logo Designing</option>
-                    <option value="ERP & CRM Systems">ERP & CRM Systems</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
                     <option value="Technology Consulting">Technology Consulting</option>
                     <option value="Digital Transformation">Digital Transformation</option>
                     <option value="SEO & Digital Marketing">SEO & Digital Marketing</option>
                     <option value="E-Commerce Solutions">E-Commerce Solutions</option>
+                    <option value="ERP & CRM Systems">ERP & CRM Systems  (Coming Soon)</option>
+                    <option value="Cloud Solutions">Cloud Solutions  (Coming Soon)</option>
                     <option value="App Development">App Development (Coming Soon)</option>
                   </select>
                 </div>
