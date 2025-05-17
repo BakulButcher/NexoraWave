@@ -8,25 +8,25 @@ const About = () => {
       icon: Rocket,
       title: 'Innovation First',
       description:
-        "We push boundaries and embrace cutting-edge technologies to deliver tomorrow's solutions today.",
+        "We push boundaries and embrace the latest technologies to deliver forward-thinking solutions that shape the future.",
     },
     {
       icon: Heart,
       title: 'Customer Success',
       description:
-        "Your success is our success. We're committed to understanding and solving your unique challenges.",
+        "Your goals drive our mission. We’re dedicated to understanding your needs and delivering solutions that create real impact.",
     },
     {
       icon: Zap,
       title: 'Agile Excellence',
       description:
-        'We adapt quickly, iterate constantly, and deliver solutions that evolve with your needs.',
+        'We move fast, adapt easily, and continuously improve—ensuring our solutions grow with you.',
     },
     {
       icon: Star,
       title: 'Quality Driven',
       description:
-        'We maintain the highest standards in code quality, security, and user experience.',
+        'From clean code to user-friendly design, we uphold the highest standards in everything we build.',
     },
   ];
 
@@ -76,10 +76,9 @@ const About = () => {
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <h2 className="text-2xl font-bold mb-4 text-[#3D52A0]">Our Mission</h2>
               <p className="text-gray-600">
-                To empower businesses through innovative software solutions that
-                drive growth, efficiency, and success. We're committed to
-                delivering high-quality, scalable, and user-friendly
-                applications that solve real-world problems.
+                To deliver innovative, custom-built digital solutions
+                that help businesses grow, transform,
+                and lead in the digital era.
               </p>
             </div>
           </div>
@@ -92,9 +91,9 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-[#3D52A0]">Who We Are</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* <div className="grid md:grid-cols-2 gap-12 items-center"> */}
             {/* Left side - Interactive image grid */}
-            <div className="grid grid-cols-2 gap-4 relative">
+            {/* <div className="grid grid-cols-2 gap-4 relative">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                 alt="Team collaboration"
@@ -105,10 +104,10 @@ const About = () => {
                 alt="Office workspace"
                 className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8"
               />
-            </div>
+            </div> */}
 
             {/* Right side - Text content with interactive elements */}
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <div className="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="text-xl font-bold mb-3 text-[#3D52A0]">Our Expertise</h3>
                 <p className="text-gray-600">
@@ -126,10 +125,10 @@ const About = () => {
                   deliver exceptional digital solutions that transform businesses and
                   empower them to thrive in a digital-first world.
                 </p>
-              </div>
+              </div> */}
 
-              {/* Stats */}
-              {/* <div className="grid grid-cols-3 gap-4 mt-6">
+            {/* Stats */}
+            {/* <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="bg-[#ADBBDA] p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
                   <div className="text-2xl font-bold text-[#3D52A0]">100+</div>
                   <div className="text-sm text-gray-600">Projects</div>
@@ -143,8 +142,30 @@ const About = () => {
                   <div className="text-sm text-gray-600">Satisfaction</div>
                 </div>
               </div> */}
+            {/* </div> */}
+          {/* </div> */}
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h2 className="text-2xl font-bold mb-4 text-[#3D52A0]">Our Expertise</h2>
+                <p className="text-gray-600">
+                  At NexoraWave, our team of expert developers, designers,
+                  and strategists work hand-in-hand to solve
+                  complex challenges with smart, elegant solutions.
+                  We don’t just code—we craft impactful
+                  digital experiences that drive success.
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h2 className="text-2xl font-bold mb-4 text-[#7091E6]">Our Approach</h2>
+                <p className="text-gray-600">
+                  We blend deep technical knowledge with creative
+                  thinking to build digital solutions that transform businesses.
+                  Our goal is simple: to help you 
+                  thrive in a fast-paced, digital-first world.
+                </p>
+              </div>
             </div>
-          </div>
         </div>
       </section>
 

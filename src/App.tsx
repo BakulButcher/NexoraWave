@@ -17,6 +17,7 @@ import ECommerce from './pages/services/ECommerce';
 import SEODigitalMarketing from './pages/services/SEODigitalMarketing';
 import CustomDevelopment from './pages/services/CustomDevelopment';
 import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/services/web-development" element={<WebDevelopment />} />
             <Route path="/services/erp-crm" element={<ERPCRM />} />
             <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
