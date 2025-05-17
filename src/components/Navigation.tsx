@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">NexoraWave</span>
+              <span className="text-2xl font-bold text-dark-blue">NexoraWave</span>
             </Link>
           </div>
 
@@ -34,16 +34,17 @@ const Navigation = () => {
                   <div className="flex items-center space-x-2">
                     <Link
                       to={item.href}
-                      className={`${isActive(item.href)
-                          ? 'text-blue-600 border-b-2 border-blue-600'
-                          : 'text-gray-700 hover:text-blue-600'
-                        } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                      className={`${
+                        isActive(item.href)
+                          ? 'text-dark-blue border-b-2 border-dark-blue'
+                          : 'text-gray-700 hover:text-medium-blue'
+                      } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                     >
                       {item.name}
                     </Link>
                     <button
                       onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                      className="text-gray-700 hover:text-blue-600"
+                      className="text-gray-700 hover:text-medium-blue"
                     >
                       <ChevronDown size={16} />
                     </button>
@@ -52,64 +53,52 @@ const Navigation = () => {
                     <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg w-48 py-2 z-10">
                       <Link
                         to="/services/web-development"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         Web Development
                       </Link>
                       <Link
                         to="/services/technology-consulting"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         Technology Consulting
                       </Link>
                       <Link
                         to="/services/digital-transformation"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         Digital Transformation
                       </Link>
                       <Link
                         to="/services/design-services"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         Design Services
                       </Link>
                       <Link
                         to="/services/e-commerce"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         E-Commerce Solutions
                       </Link>
                       <Link
                         to="/services/seo-digital-marketing"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         SEO & Digital Marketing
                       </Link>
                       <Link
                         to="/services/custom-development"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-700 hover:bg-very-light-lavender"
                       >
                         Custom Development
                       </Link>
-                      <Link
-                        to="/services/erp-crm"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                      ></Link>
                       <span className="block px-4 py-2 text-gray-400">
                         ERP & CRM Systems (Coming Soon)
                       </span>
-
-                      <Link
-                        to="/services/cloud-solutions"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                      ></Link>
-                      <span className="block px-4 py-2 text-gray-400">Cloud Solutions (Coming Soon)</span>
-
-                      <Link
-                        to="/services/app-development"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                      ></Link>
+                      <span className="block px-4 py-2 text-gray-400">
+                        Cloud Solutions (Coming Soon)
+                      </span>
                       <span className="block px-4 py-2 text-gray-400">
                         App Development (Coming Soon)
                       </span>
@@ -120,10 +109,11 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`${isActive(item.href)
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
-                    } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                  className={`${
+                    isActive(item.href)
+                      ? 'text-dark-blue border-b-2 border-dark-blue'
+                      : 'text-gray-700 hover:text-medium-blue'
+                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                 >
                   {item.name}
                 </Link>
@@ -131,17 +121,16 @@ const Navigation = () => {
             )}
             <Link
               to="/get-started"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+              className="bg-dark-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-medium-blue transition-colors duration-200"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile Menu */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-medium-blue"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -149,17 +138,17 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden px-4 pb-3">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className={`block ${isActive(item.href)
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
-                } py-2`}
+              className={`block ${
+                isActive(item.href)
+                  ? 'text-dark-blue'
+                  : 'text-gray-700 hover:text-medium-blue'
+              } py-2`}
             >
               {item.name}
             </Link>

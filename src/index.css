@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark-blue: #3D52A0;
+  --medium-blue: #7091E6;
+  --blue-gray: #8697C4;
+  --light-blue-gray: #ADBBDA;
+  --very-light-lavender: #EDE8F5;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
