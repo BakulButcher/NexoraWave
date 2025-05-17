@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, ArrowRight, Zap, RefreshCw, Database, Cloud, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const DigitalTransformation: React.FC = () => {
   const services = [
@@ -103,9 +104,9 @@ const DigitalTransformation: React.FC = () => {
               ))}
             </ul>
             <div className="mt-12 text-center">
-              <button className="bg-[#3D52A0] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#7091E6] transition shadow">
+              <Link to="/contact" className="bg-[#3D52A0] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#7091E6] transition-all duration-300 w-full sm:w-auto text-center">
                 Start Your Digital Transformation
-              </button>
+              </Link>
             </div>
           </div>
         </div>

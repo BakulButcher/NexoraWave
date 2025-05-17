@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WebDevelopment: React.FC = () => {
   const packages = [
@@ -114,9 +115,8 @@ const WebDevelopment: React.FC = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition relative ${
-                  pkg.mostPopular ? 'border-2 border-[#7091E6] transform md:-translate-y-2' : ''
-                }`}
+                className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition relative ${pkg.mostPopular ? 'border-2 border-[#7091E6] transform md:-translate-y-2' : ''
+                  }`}
               >
                 {pkg.mostPopular && (
                   <div className="absolute top-0 inset-x-0 -mt-4 flex justify-center">
@@ -165,9 +165,9 @@ const WebDevelopment: React.FC = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <button className="bg-[#3D52A0] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#7091E6] transition shadow">
+            <Link to="/contact" className="bg-[#3D52A0] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#7091E6] transition-all duration-300 w-full sm:w-auto text-center">
               Request Custom Quote
-            </button>
+            </Link>
           </div>
         </div>
       </section>

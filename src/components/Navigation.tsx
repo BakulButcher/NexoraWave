@@ -56,8 +56,8 @@ const Navigation = () => {
                     <Link
                       to={item.href}
                       className={`${isActive(item.href)
-                          ? 'text-[#3D52A0] border-b-2 border-[#3D52A0]'
-                          : 'text-gray-700 hover:text-[#7091E6]'
+                        ? 'text-[#3D52A0] border-b-2 border-[#3D52A0]'
+                        : 'text-gray-700 hover:text-[#7091E6]'
                         } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                     >
                       {item.name}
@@ -137,8 +137,8 @@ const Navigation = () => {
                   key={item.name}
                   to={item.href}
                   className={`${isActive(item.href)
-                      ? 'text-[#3D52A0] border-b-2 border-[#3D52A0]'
-                      : 'text-gray-700 hover:text-[#7091E6]'
+                    ? 'text-[#3D52A0] border-b-2 border-[#3D52A0]'
+                    : 'text-gray-700 hover:text-[#7091E6]'
                     } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                 >
                   {item.name}

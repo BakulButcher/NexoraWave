@@ -417,29 +417,6 @@ const Contact = () => {
     setFormErrors(errors);
   };
 
-  const faqItems = [
-    {
-      question: "What services do you offer?",
-      answer: "We offer a wide range of services including Web Development, Mobile App Development, Custom Software Solutions, IT Consulting and many more."
-    },
-    {
-      question: "How can I book a consultation?",
-      answer: "You can book a consultation by filling out our contact form, or you can reach us directly at contact@nexorawave.com."
-    },
-    {
-      question: "Do you offer ongoing support after project completion?",
-      answer: "Yes! We provide ongoing support and maintenance services to ensure your systems run smoothly."
-    },
-    {
-      question: "Can you help with legacy system integrations?",
-      answer: "Absolutely. Our team specializes in integrating modern solutions with legacy systems to improve efficiency and performance."
-    },
-    {
-      question: "What is the typical project timeline?",
-      answer: "Project timelines vary based on the scope and complexity. We'll provide a detailed timeline during the planning phase."
-    }
-  ];
-
   return (
     <div>
       {/* Hero Section */}
@@ -488,9 +465,8 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${
-                      formErrors.fullName ? 'border-red-500' : ''
-                    }`}
+                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${formErrors.fullName ? 'border-red-500' : ''
+                      }`}
                   />
                   {formErrors.fullName && (
                     <Alert variant="destructive" className="mt-2">
@@ -510,9 +486,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${
-                      formErrors.email ? 'border-red-500' : ''
-                    }`}
+                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${formErrors.email ? 'border-red-500' : ''
+                      }`}
                   />
                   {formErrors.email && (
                     <Alert variant="destructive" className="mt-2">
@@ -593,7 +568,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-6 h-6 text-[#7091E6] mr-4" />
-                    <span>Ahmedabad, Gujarat, India</span>
+                    <span>New Ranip, Ahmedabad, Gujarat, India</span>
                   </div>
                   <div className="flex items-center">
                     <Clock className="w-6 h-6 text-[#7091E6] mr-4" />
@@ -602,7 +577,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
+              {/* FAQs Section */}
+              {/* <div>
                 <h2 className="text-2xl font-bold mb-6 text-[#3D52A0]">Frequently Asked Questions</h2>
                 <div className="space-y-4">
                   {faqItems.map((faq, index) => (
@@ -621,6 +597,31 @@ const Contact = () => {
                       {activeFAQ === index && <p className="mt-2 text-gray-600">{faq.answer}</p>}
                     </div>
                   ))}
+                </div>
+              </div> */}
+
+              {/* Map Section - Replacing FAQ */}
+              <div className="bg-white rounded-lg shadow-md p-4">
+                <h2 className="text-2xl font-bold mb-4 text-[#3D52A0]">Our Location</h2>
+                <div className="relative overflow-hidden rounded-lg" style={{ height: "400px" }}>
+                  {/* Google Maps iFrame */}
+                  <iframe
+                    title="Office Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14682.539350420996!2d72.58028197057747!3d23.092753361889747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83a97f7d6add%3A0x9c6234c2a55eabc0!2sNew%20Ranip%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1716029969562!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div className="mt-4 p-4 bg-[#EDE8F5] rounded-lg">
+                  <h3 className="font-medium text-[#3D52A0]">Visit Our Office</h3>
+                  <p className="text-gray-700 mt-2">
+                    Our office is conveniently located in New Ranip, Ahmedabad.
+                    We welcome in-person appointments - please call ahead to schedule a visit!
+                  </p>
                 </div>
               </div>
             </div>

@@ -68,7 +68,7 @@ const Services: React.FC = () => {
             Services at NexoraWave
           </h1>
           <p className="text-xl text-gray-100 max-w-2xl">
-          Expert software development solutions to power your business.
+            Expert software development solutions to power your business.
           </p>
         </div>
       </section>

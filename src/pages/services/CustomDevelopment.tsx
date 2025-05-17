@@ -1,5 +1,7 @@
+
 import React from 'react';
-import { Check, ArrowRight, Code, Link, Building, Lock, Gauge, LayoutDashboard } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Check, ArrowRight, Code, Link as LinkIcon, Building, Lock, Gauge, LayoutDashboard } from 'lucide-react';
 
 const CustomDevelopment: React.FC = () => {
   const services = [
@@ -13,7 +15,7 @@ const CustomDevelopment: React.FC = () => {
       name: 'API Integration',
       description:
         'Seamlessly connect your software with third-party services and platforms.',
-      icon: Link
+      icon: LinkIcon
     },
     {
       name: 'Enterprise Applications',
@@ -109,9 +111,9 @@ const CustomDevelopment: React.FC = () => {
               ))}
             </ul>
             <div className="mt-12 text-center">
-              <button className="bg-[#3D52A0] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#7091E6] transition shadow">
+              <Link to="/contact" className="bg-[#3D52A0] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#7091E6] transition-all duration-300 w-full sm:w-auto text-center">
                 Start Your Development Project
-              </button>
+              </Link>
             </div>
           </div>
         </div>

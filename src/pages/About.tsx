@@ -129,7 +129,7 @@ const About = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-6">
+              {/* <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="bg-[#ADBBDA] p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
                   <div className="text-2xl font-bold text-[#3D52A0]">100+</div>
                   <div className="text-sm text-gray-600">Projects</div>
@@ -142,7 +142,7 @@ const About = () => {
                   <div className="text-2xl font-bold text-[#3D52A0]">95%</div>
                   <div className="text-sm text-gray-600">Satisfaction</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
