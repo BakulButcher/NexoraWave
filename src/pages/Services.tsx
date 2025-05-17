@@ -16,12 +16,12 @@ const Services: React.FC = () => {
     // },
     {
       icon: Database,
-      title: 'Custom Software',
+      title: 'Custom Development',
       description: 'Tailored software solutions to meet your specific business needs.',
     },
     {
       icon: PenTool,
-      title: 'Logo Designing',
+      title: 'Design Services',
       description: 'Professional logo design services to create a unique brand identity for you.',
     },
     // {

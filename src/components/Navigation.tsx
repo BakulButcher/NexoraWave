@@ -9,6 +9,8 @@ const Navigation = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services', isDropdown: true },
+    { name: 'Careers', href: '/careers' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -26,105 +28,107 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`${
-                  isActive(item.href)
-                    ? 'text-blue-600 border-b-2 border-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
-                } px-3 py-2 text-sm font-medium transition-colors duration-200`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.isDropdown ? (
+                <div key={item.name} className="relative">
+                  <div className="flex items-center space-x-2">
+                    <Link
+                      to={item.href}
+                      className={`${isActive(item.href)
+                          ? 'text-blue-600 border-b-2 border-blue-600'
+                          : 'text-gray-700 hover:text-blue-600'
+                        } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                    >
+                      {item.name}
+                    </Link>
+                    <button
+                      onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                      className="text-gray-700 hover:text-blue-600"
+                    >
+                      <ChevronDown size={16} />
+                    </button>
+                  </div>
+                  {isServicesDropdownOpen && (
+                    <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg w-48 py-2 z-10">
+                      <Link
+                        to="/services/web-development"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        Web Development
+                      </Link>
+                      <Link
+                        to="/services/technology-consulting"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        Technology Consulting
+                      </Link>
+                      <Link
+                        to="/services/digital-transformation"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        Digital Transformation
+                      </Link>
+                      <Link
+                        to="/services/design-services"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        Design Services
+                      </Link>
+                      <Link
+                        to="/services/e-commerce"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        E-Commerce Solutions
+                      </Link>
+                      <Link
+                        to="/services/seo-digital-marketing"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        SEO & Digital Marketing
+                      </Link>
+                      <Link
+                        to="/services/custom-development"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        Custom Development
+                      </Link>
+                      <Link
+                        to="/services/erp-crm"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      ></Link>
+                      <span className="block px-4 py-2 text-gray-400">
+                        ERP & CRM Systems (Coming Soon)
+                      </span>
 
-            {/* Services Navigation with Dropdown */}
-            <div className="relative">
-              <div className="flex items-center space-x-2">
+                      <Link
+                        to="/services/cloud-solutions"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      ></Link>
+                      <span className="block px-4 py-2 text-gray-400">Cloud Solutions (Coming Soon)</span>
+
+                      <Link
+                        to="/services/app-development"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      ></Link>
+                      <span className="block px-4 py-2 text-gray-400">
+                        App Development (Coming Soon)
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ) : (
                 <Link
-                  to="/services"
-                  className={`${
-                    isActive('/services')
+                  key={item.name}
+                  to={item.href}
+                  className={`${isActive(item.href)
                       ? 'text-blue-600 border-b-2 border-blue-600'
                       : 'text-gray-700 hover:text-blue-600'
-                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                    } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                 >
-                  Services
+                  {item.name}
                 </Link>
-                <button
-                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                  className="text-gray-700 hover:text-blue-600"
-                >
-                  <ChevronDown size={16} />
-                </button>
-              </div>
-              {isServicesDropdownOpen && (
-                <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg w-48 py-2 z-10">
-                  <Link
-                    to="/services/web-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    to="/services/technology-consulting"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Technology Consulting
-                  </Link>
-                  <Link
-                    to="/services/digital-transformation"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Digital Transformation
-                  </Link>
-                  <Link
-                    to="/services/design-services"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Design Services
-                  </Link>
-                  <Link
-                    to="/services/e-commerce"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    E-Commerce Solutions
-                  </Link>
-                  <Link
-                    to="/services/seo-digital-marketing"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    SEO & Digital Marketing
-                  </Link>
-                  <Link
-                    to="/services/custom-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Custom Development
-                  </Link>
-                  <Link
-                    to="/services/erp-crm"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  ></Link>
-                    <span className="block px-4 py-2 text-gray-400">
-                    ERP & CRM Systems (Coming Soon)
-                    </span>
-                  
-                  <Link
-                    to="/services/cloud-solutions"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  ></Link>
-                    <span className="block px-4 py-2 text-gray-400">Cloud Solutions (Coming Soon)</span>
-                  <span className="block px-4 py-2 text-gray-400">
-                    App Development (Coming Soon)
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started Button */}
+              )
+            )}
             <Link
               to="/get-started"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
@@ -152,34 +156,14 @@ const Navigation = () => {
             <Link
               key={item.name}
               to={item.href}
-              className={`block ${
-                isActive(item.href)
+              className={`block ${isActive(item.href)
                   ? 'text-blue-600'
                   : 'text-gray-700 hover:text-blue-600'
-              } py-2`}
+                } py-2`}
             >
               {item.name}
             </Link>
           ))}
-          <div className="py-2">
-            <button
-              onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-              className="text-gray-700 hover:text-blue-600 flex items-center w-full"
-            >
-              Services <ChevronDown className="ml-2" size={16} />
-            </button>
-            {isServicesDropdownOpen && (
-              <div className="pl-4 mt-2">
-                <Link
-                  to="/services/web-development"
-                  className="block text-gray-700 hover:bg-gray-50 py-1 rounded"
-                >
-                  Web Development
-                </Link>
-                {/* Other services */}
-              </div>
-            )}
-          </div>
         </div>
       )}
     </nav>

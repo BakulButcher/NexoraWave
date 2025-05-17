@@ -27,7 +27,14 @@ const WebDevelopment: React.FC = () => {
       features: [
         'Up to 12 pages',
         'Dynamic website with CMS',
-        'Blog/News section',
+        'Responsive (mobile-friendly) design',
+        'Basic HTML and SEO-ready (meta tags, titles, descriptions)',
+        'Custom layout design',
+        'Contact form (email-enabled)',
+        'Social media links and buttons',
+        'Testimonial management',
+        'Newsletter setup',
+        'Free hosting for 1 month',
         'Google Maps integration',
         'XML sitemap and URL submission to search engines',
         '3-hour website training',
@@ -58,7 +65,7 @@ const WebDevelopment: React.FC = () => {
     'Custom/Business Email Setup',
     'Advanced SEO Services',
     'Performance Optimization',
-    // 'Security and backup',
+    'Security and Backup',
     'Additional Changes',
   ];
 
@@ -77,7 +84,7 @@ const WebDevelopment: React.FC = () => {
       {/* Packages Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Packages</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Compare Our Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
               <div
@@ -86,7 +93,7 @@ const WebDevelopment: React.FC = () => {
               >
                 <h3 className="text-xl font-bold mb-4 text-blue-600">{pkg.name}</h3>
                 <p className="text-gray-700 font-medium mb-4">{pkg.priceRange}</p>
-                <ul className="space-y-3 mb-4">
+                <ul className="space-y-2 mb-4">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-center">
                       <Check className="w-5 h-5 text-green-500 mr-3" />
