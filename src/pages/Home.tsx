@@ -57,93 +57,59 @@ const Home = () => {
       quote:
         'NexoraWave transformed our business with their exceptional web development services.',
     },
-    // {
-    //   name: 'Michael Chen',
-    //   role: 'Founder, AppVision',
-    //   image:
-    //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
-    //   quote:
-    //     'Their mobile app development expertise helped us launch a successful product.',
-    // },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-600 to-purple-600 opacity-90" />
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518408232232-4f35b0540842?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA4MHwwfDF8c2VhcmNofDEwfHxpY2vHoh%2C&id=g7d0')] bg-cover bg-center mix-blend-overlay" />
-          <div className="absolute inset-0 opacity-30">
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute animate-float"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                  width: `${Math.random() * 10 + 5}px`,
-                  height: `${Math.random() * 10 + 5}px`,
-                  backgroundColor: 'white',
-                  borderRadius: '50%',
-                }}
-              />
-            ))}
-          </div>
+      <section className="relative pt-24 pb-32 md:pt-36 md:pb-22 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 -z-10">
+          <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-[#7091E6]/20 to-transparent opacity-70" />
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-[#3D52A0]/10 to-transparent opacity-70" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#EDE8F5]/30 animate-pulse-slow" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-8">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in">
-                Build Your{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
-                  Digital Future
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 animate-fade-in-delay">
-                Expert software development services to transform your ideas
-                into reality.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
-                <Link
-                  to="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 text-center"
-                >
-                  Start Your Project
-                </Link>
-                <Link
-                  to="/services"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 text-center"
-                >
-                  Our Services
-                </Link>
-              </div>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3D52A0] to-[#7091E6]">Innovation in Motion</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-[#8697C4] mb-8 md:mb-10">
+              At NexoraWave, we craft powerful digital solutions — from custom software and cloud infrastructure to e-commerce platforms — designed to move your business forward with purpose and precision.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to="/services" className="bg-[#3D52A0] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#7091E6] transition-all duration-300 w-full sm:w-auto text-center">
+                Explore Services
+              </Link>
+              <Link to="/contact" className="border-2 border-[#3D52A0] text-[#3D52A0] px-8 py-3.5 rounded-lg font-medium hover:bg-[#EDE8F5] transition-all duration-300 w-full sm:w-auto text-center">
+                Contact Us
+              </Link>
             </div>
-            <div className="hidden md:block relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full filter blur-3xl opacity-30 animate-pulse" />
-              <div className="relative grid grid-cols-2 gap-4">
-                {services.map(({ icon: Icon }, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl transform hover:scale-105 transition-all duration-300"
-                    style={{ animationDelay: `${index * 0.2}s` }}
-                  >
-                    <Icon className="w-12 h-12 text-white" />
-                  </div>
-                ))}
-              </div>
-            </div>
+
+            {/* Floating highlights */}
+            {/* <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {['Web Development', 'App Development', 'E-Commerce', 'Cloud Solutions'].map((item, index) => (
+                <div 
+                  key={item}
+                  className={`rounded-lg border border-[#3D52A0]/10 bg-white/70 backdrop-blur-sm py-3 px-4 shadow-sm
+                    ${index % 2 === 0 ? 'animate-float' : 'animation-delay-1000 animate-float'}`}
+                >
+                  <p className="font-medium text-[#3D52A0]">{item}</p>
+                </div>
+              ))}
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-2 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl font-bold mb-4 text-[#3D52A0]">Our Services</h2>
+            <p className="text-xl text-[#8697C4]">
               Expert development solutions for your business
             </p>
           </div>
@@ -153,12 +119,12 @@ const Home = () => {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
-                <Icon className="w-12 h-12 text-blue-600 mb-6" />
-                <h3 className="text-2xl font-bold mb-4">{title}</h3>
-                <p className="text-gray-600 mb-6">{description}</p>
+                <Icon className="w-12 h-12 text-[#7091E6] mb-6" />
+                <h3 className="text-2xl font-bold mb-4 text-[#3D52A0]">{title}</h3>
+                <p className="text-[#8697C4] mb-6">{description}</p>
                 <Link
                   to="/services"
-                  className="text-blue-600 font-medium flex items-center hover:text-blue-700"
+                  className="text-[#7091E6] font-medium flex items-center hover:text-[#3D52A0]"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
@@ -168,7 +134,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300"
+              className="bg-[#3D52A0] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#7091E6] transition-all duration-300"
             >
               See More Services
             </Link>
@@ -177,45 +143,47 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
+                <div className="text-4xl font-bold text-[#3D52A0] mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-[#8697C4]">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl font-bold mb-4 text-[#3D52A0]">Client Testimonials</h2>
+            <p className="text-xl text-[#8697C4]">
               What our clients say about us
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl">
-                <div className="flex items-center mb-6">
-                  {/* <img
-                    src={testimonial.image}
-                    alt={`Photo of ${testimonial.name}`}
-                    className="w-16 h-16 rounded-full object-cover mr-4"
-                  /> */}
-                  <div>
-                    <div className="font-bold">{testimonial.name}</div>
-                    <div className="text-gray-600">{testimonial.role}</div>
+              <div key={index} className="bg-white border border-[#ADBBDA] p-8 rounded-xl shadow-md">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="text-center">
+                    <div className="font-bold text-[#3D52A0] text-xl">{testimonial.name}</div>
+                    <div className="text-[#8697C4]">{testimonial.role}</div>
                   </div>
                 </div>
-                <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+                <p className="text-[#8697C4] italic text-center text-lg">"{testimonial.quote}"</p>
+                <div className="flex justify-center mt-4">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-[#7091E6] fill-[#7091E6]" />
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -223,18 +191,18 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#3D52A0] to-[#7091E6] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-8">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[#EDE8F5] mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help bring your vision to life with our
             expert development services.
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:bg-blue-50 transition-all duration-300"
+            className="inline-block bg-white text-[#3D52A0] px-8 py-4 rounded-lg font-medium hover:bg-[#EDE8F5] transition-all duration-300"
           >
             Get in Touch
           </Link>

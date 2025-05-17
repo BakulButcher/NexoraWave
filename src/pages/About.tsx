@@ -34,10 +34,10 @@ const About = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 relative"
+        className="text-white py-20 relative"
         style={{
           backgroundImage: `
-      linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(147, 51, 234, 0.9)),
+      linear-gradient(to right, rgba(61, 82, 160, 0.9), rgba(112, 145, 230, 0.9)),
       url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80')
     `,
           backgroundSize: 'cover',
@@ -55,18 +55,18 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             About NexoraWave
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
+          <p className="text-xl text-gray-100 max-w-2xl">
             Shaping the future of software development with innovation and expertise
           </p>
         </div>
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#3D52A0]">Our Vision</h2>
               <p className="text-gray-600">
                 To revolutionize the software development landscape by creating
                 innovative, scalable, and user-centric solutions that empower
@@ -74,7 +74,7 @@ const About = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#3D52A0]">Our Mission</h2>
               <p className="text-gray-600">
                 To empower businesses through innovative software solutions that
                 drive growth, efficiency, and success. We're committed to
@@ -87,10 +87,10 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold">Who We Are</h2>
+            <h2 className="text-3xl font-bold text-[#3D52A0]">Who We Are</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left side - Interactive image grid */}
@@ -110,7 +110,7 @@ const About = () => {
             {/* Right side - Text content with interactive elements */}
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">Our Expertise</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#3D52A0]">Our Expertise</h3>
                 <p className="text-gray-600">
                   Our team of skilled developers, designers, and strategists works
                   collaboratively to turn complex challenges into elegant solutions.
@@ -120,7 +120,7 @@ const About = () => {
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="text-xl font-bold mb-3 text-purple-600">Our Approach</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#7091E6]">Our Approach</h3>
                 <p className="text-gray-600">
                   We combine technical expertise with creative problem-solving to
                   deliver exceptional digital solutions that transform businesses and
@@ -130,16 +130,16 @@ const About = () => {
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-6">
-                <div className="bg-blue-50 p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-blue-600">100+</div>
+                <div className="bg-[#ADBBDA] p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-2xl font-bold text-[#3D52A0]">100+</div>
                   <div className="text-sm text-gray-600">Projects</div>
                 </div>
-                <div className="bg-purple-50 p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-purple-600">50+</div>
+                <div className="bg-[#ADBBDA] p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-2xl font-bold text-[#3D52A0]">50+</div>
                   <div className="text-sm text-gray-600">Clients</div>
                 </div>
-                <div className="bg-indigo-50 p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-indigo-600">95%</div>
+                <div className="bg-[#ADBBDA] p-4 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-2xl font-bold text-[#3D52A0]">95%</div>
                   <div className="text-sm text-gray-600">Satisfaction</div>
                 </div>
               </div>
@@ -149,16 +149,16 @@ const About = () => {
       </section>
 
       {/* Core Values Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-[#EDE8F5] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#3D52A0]">
             Our Core Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <value.icon className="w-12 h-12 text-blue-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                <value.icon className="w-12 h-12 text-[#7091E6] mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -167,15 +167,15 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Choose NexoraWave?</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#3D52A0]">Why Choose NexoraWave?</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">🌱 Fresh Perspective</h3>
+            <div className="bg-[#EDE8F5] p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">🌱 Fresh Perspective</h3>
               <p className="text-gray-600">
                 We approach challenges with new ideas and a willingness to
                 innovate. Our startup culture fosters creativity and agility,
@@ -183,8 +183,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">
+            <div className="bg-[#EDE8F5] p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">
                 🤝 Client-Centric Approach
               </h3>
               <p className="text-gray-600">
@@ -194,8 +194,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">
+            <div className="bg-[#EDE8F5] p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">
                 ⚡ Agility and Innovation
               </h3>
               <p className="text-gray-600">
@@ -209,18 +209,18 @@ const About = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-r from-[#3D52A0] to-[#7091E6] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Ready to Build Something Amazing?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
             Let's work together to bring your vision to life with innovative
             software solutions.
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-[#3D52A0] px-8 py-4 rounded-lg font-medium hover:bg-[#EDE8F5] transition-colors"
           >
             Start Your Project
           </Link>

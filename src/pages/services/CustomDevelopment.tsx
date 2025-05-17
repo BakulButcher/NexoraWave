@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { Check, ArrowRight, Code, Link, Building, Lock, Gauge, LayoutDashboard } from 'lucide-react';
 
 const CustomDevelopment: React.FC = () => {
   const services = [
@@ -7,31 +7,37 @@ const CustomDevelopment: React.FC = () => {
       name: 'Tailored Software Solutions',
       description:
         'Develop custom software designed specifically to meet your unique business requirements.',
+      icon: Code
     },
     {
       name: 'API Integration',
       description:
         'Seamlessly connect your software with third-party services and platforms.',
+      icon: Link
     },
     {
       name: 'Enterprise Applications',
       description:
         'Build scalable enterprise-grade applications to support your business operations.',
+      icon: Building
     },
     {
       name: 'User Authentication Systems',
       description:
         'Ensure secure access to your applications with robust user authentication mechanisms.',
+      icon: Lock
     },
     {
       name: 'Performance Optimization',
       description:
         'Enhance the speed and responsiveness of your existing applications.',
+      icon: Gauge
     },
     {
       name: 'Admin Dashboards',
       description:
         'Create intuitive and feature-rich dashboards for better management and monitoring.',
+      icon: LayoutDashboard
     },
   ];
 
@@ -45,46 +51,37 @@ const CustomDevelopment: React.FC = () => {
   ];
 
   return (
-    <div className="py-20">
+    <div>
       {/* Hero Section */}
-      <section
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 relative"
-        style={{
-          backgroundImage: `
-        linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(147, 51, 234, 0.9)),
-        url('https://images.unsplash.com/photo-1581093458790-06d3fd5ffbd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
-      `,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Overlay Pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='white' stroke-width='2'%3E%3Cpath d='M34 36 Q 36 34, 38 35 Q 40 36, 42 34'/%3E%3Cpath d='M34 6 Q 36 4, 38 5 Q 40 6, 42 4'/%3E%3Cpath d='M4 36 Q 6 34, 8 35 Q 10 36, 12 34'/%3E%3Cpath d='M4 6 Q 6 4, 8 5 Q 10 6, 12 4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="bg-gradient-to-r from-[#3D52A0] to-[#7091E6] text-white py-20 relative">
+        <div className="absolute inset-0 opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Development</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
+          <p className="text-lg md:text-xl text-[#ADBBDA] max-w-2xl mx-auto mb-8">
             Bring your ideas to life with fully tailored software solutions designed for your business needs.
           </p>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Custom Development Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold mb-4 text-center text-[#3D52A0]">Our Custom Development Services</h2>
+          <p className="text-[#8697C4] text-center mb-12 max-w-2xl mx-auto">
+            Powerful, scalable software solutions designed and built specifically for your unique business challenges.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition flex flex-col h-full"
               >
-                <h3 className="text-xl font-bold mb-4 text-blue-600">{service.name}</h3>
-                <p className="text-gray-700">{service.description}</p>
+                <service.icon className="w-12 h-12 text-[#7091E6] mb-6" />
+                <h3 className="text-xl font-bold mb-4 text-[#3D52A0]">{service.name}</h3>
+                <p className="text-gray-700 mb-6 flex-grow">{service.description}</p>
+                <a href="#" className="text-[#3D52A0] font-medium flex items-center hover:text-[#7091E6] transition">
+                  Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </div>
             ))}
           </div>
@@ -94,17 +91,29 @@ const CustomDevelopment: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Why Choose NexoraWave for Custom Development?
-          </h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-            {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-start">
-                <Check className="w-5 h-5 text-green-500 mr-3 mt-1" />
-                <span>{benefit}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            <h2 className="text-3xl font-bold mb-8 text-center text-[#3D52A0]">
+              Why Choose NexoraWave for Custom Development?
+            </h2>
+            <div className="mb-12">
+              <p className="text-[#8697C4] text-center max-w-2xl mx-auto">
+                Partner with our expert development team to transform your vision into a powerful, scalable, and secure software solution.
+              </p>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
+              {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-start bg-[#EDE8F5] p-4 rounded-lg">
+                  <Check className="w-6 h-6 text-[#7091E6] mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 font-medium">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-12 text-center">
+              <button className="bg-[#3D52A0] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#7091E6] transition shadow">
+                Start Your Development Project
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>

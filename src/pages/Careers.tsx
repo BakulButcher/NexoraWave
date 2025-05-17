@@ -26,7 +26,7 @@ const Careers: React.FC = () => {
       type: 'Full-Time',
       location: 'Ahmedabad, Gujarat',
       description:
-        'We’re looking for a creative front-end developer with expertise in React, TypeScript, and Tailwind CSS.',
+        "We're looking for a creative front-end developer with expertise in React, TypeScript, and Tailwind CSS.",
     },
     {
       title: 'Cloud Solutions Architect',
@@ -68,15 +68,15 @@ const Careers: React.FC = () => {
   ];
 
   return (
-    <div className="py-20">
+    <div>
       {/* Hero Section */}
       <section
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 relative"
+        className="text-white py-20 relative"
         style={{
           backgroundImage: `
-        linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(147, 51, 234, 0.9)),
-        url('https://images.unsplash.com/photo-1565120130290-637f243db1da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
-      `,
+      linear-gradient(to right, rgba(61, 82, 160, 0.9), rgba(112, 145, 230, 0.9)),
+      url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80')
+    `,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -89,24 +89,26 @@ const Careers: React.FC = () => {
           }}
         ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Careers at NexoraWave</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Careers at NexoraWave
+          </h1>
+          <p className="text-xl text-gray-100">
             Join a team that values creativity, innovation, and a passion for solving real-world problems.
           </p>
         </div>
       </section>
 
       {/* Training Programs Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Training Programs</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#3D52A0]">Training Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trainingPrograms.map((program, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
               >
-                <h3 className="text-xl font-bold mb-4 text-blue-600">{program.name}</h3>
+                <h3 className="text-xl font-bold mb-4 text-[#3D52A0]">{program.name}</h3>
                 <p className="text-gray-700">{program.description}</p>
               </div>
             ))}
@@ -117,17 +119,17 @@ const Careers: React.FC = () => {
       {/* Job Opportunities Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Job Opportunities</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#3D52A0]">Job Opportunities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {jobOpportunities.map((job, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
               >
-                <h3 className="text-xl font-bold mb-2 text-blue-600">{job.title}</h3>
-                <p className="text-sm text-gray-500">{job.type} · {job.location}</p>
+                <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">{job.title}</h3>
+                <p className="text-sm text-[#8697C4]">{job.type} · {job.location}</p>
                 <p className="text-gray-700 mt-4">{job.description}</p>
-                <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+                <button className="mt-4 bg-[#3D52A0] text-white py-2 px-4 rounded hover:bg-[#7091E6] transition">
                   Apply Now
                 </button>
               </div>
@@ -137,14 +139,14 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Work at NexoraWave?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#3D52A0]">Why Work at NexoraWave?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <benefit.icon className="w-12 h-12 text-blue-600 mb-4 mx-auto" />
-                <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                <benefit.icon className="w-12 h-12 text-[#7091E6] mb-4 mx-auto" />
+                <h3 className="text-xl font-bold mb-2 text-[#3D52A0]">{benefit.title}</h3>
                 <p className="text-gray-700">{benefit.description}</p>
               </div>
             ))}

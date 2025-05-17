@@ -256,14 +256,14 @@ const Contact = () => {
               type="text"
               value={manualCountryCode}
               onChange={handleManualCodeChange}
-              className="w-24 px-3 py-2 border rounded-l-lg focus:ring-2 focus:ring-blue-500"
+              className="w-24 px-3 py-2 border rounded-l-lg focus:ring-2 focus:ring-[#7091E6]"
               placeholder="+91"
             />
           ) : (
             <button
               type="button"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center px-4 py-2 border rounded-l-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[100px]"
+              className="flex items-center px-4 py-2 border rounded-l-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#7091E6] min-w-[100px]"
             >
               <span className="mr-2">{formData.countryCode}</span>
               <ChevronDown className="w-4 h-4" />
@@ -273,7 +273,7 @@ const Contact = () => {
           <button
             type="button"
             onClick={() => setIsManualInput(!isManualInput)}
-            className="absolute right-0 top-0 mt-2 mr-2 text-xs text-blue-600 hover:text-blue-800"
+            className="absolute right-0 top-0 mt-2 mr-2 text-xs text-[#3D52A0] hover:text-[#7091E6]"
           >
             {isManualInput ? "Select" : "Manual"}
           </button>
@@ -288,7 +288,7 @@ const Contact = () => {
                     placeholder="Search countries..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-9 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full pl-9 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7091E6]"
                   />
                 </div>
               </div>
@@ -307,7 +307,7 @@ const Contact = () => {
                         setIsDropdownOpen(false);
                         setSearchQuery("");
                       }}
-                      className="w-full px-4 py-2 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 flex items-center"
+                      className="w-full px-4 py-2 text-left hover:bg-[#EDE8F5] focus:outline-none focus:bg-[#EDE8F5] flex items-center"
                     >
                       {country.flag && (
                         <img
@@ -334,7 +334,7 @@ const Contact = () => {
           value={formData.phone}
           onChange={handleInputChange}
           maxLength={selectedCountry.maxLength}
-          className="flex-1 px-4 py-2 border rounded-r-lg focus:ring-2 focus:ring-blue-500"
+          className="flex-1 px-4 py-2 border rounded-r-lg focus:ring-2 focus:ring-[#7091E6]"
           placeholder={`Enter ${selectedCountry.maxLength || ''} digit number`}
           required
         />
@@ -444,10 +444,10 @@ const Contact = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 relative"
+        className="text-white py-20 relative"
         style={{
           backgroundImage: `
-      linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(147, 51, 234, 0.9)),
+      linear-gradient(to right, rgba(61, 82, 160, 0.9), rgba(112, 145, 230, 0.9)),
       url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80')
     `,
           backgroundSize: 'cover',
@@ -465,17 +465,17 @@ const Contact = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Contact Us
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
+          <p className="text-xl text-gray-100">
             Get in touch with our team of experts to learn how we can help your business grow.
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#EDE8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+              <h2 className="text-2xl font-bold mb-6 text-[#3D52A0]">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -488,8 +488,9 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${formErrors.fullName ? 'border-red-500' : ''
-                      }`}
+                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${
+                      formErrors.fullName ? 'border-red-500' : ''
+                    }`}
                   />
                   {formErrors.fullName && (
                     <Alert variant="destructive" className="mt-2">
@@ -509,8 +510,9 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${formErrors.email ? 'border-red-500' : ''
-                      }`}
+                    className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6] ${
+                      formErrors.email ? 'border-red-500' : ''
+                    }`}
                   />
                   {formErrors.email && (
                     <Alert variant="destructive" className="mt-2">
@@ -531,7 +533,7 @@ const Contact = () => {
                     value={formData.service}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6]"
                   >
                     <option value="">Select a service</option>
                     <option value="Web Development">Web Development</option>
@@ -557,14 +559,14 @@ const Contact = () => {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#7091E6]"
                     aria-label="Message"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="w-full bg-[#3D52A0] text-white py-3 rounded-lg hover:bg-[#7091E6] transition-colors"
                 >
                   Submit
                 </button>
@@ -579,29 +581,29 @@ const Contact = () => {
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-6 text-[#3D52A0]">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Mail className="w-6 h-6 text-blue-600 mr-4" />
+                    <Mail className="w-6 h-6 text-[#7091E6] mr-4" />
                     <span>contact@nexorawave.com</span>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="w-6 h-6 text-blue-600 mr-4" />
+                    <Phone className="w-6 h-6 text-[#7091E6] mr-4" />
                     <span>+91 83204 11204</span>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="w-6 h-6 text-blue-600 mr-4" />
+                    <MapPin className="w-6 h-6 text-[#7091E6] mr-4" />
                     <span>Ahmedabad, Gujarat, India</span>
                   </div>
                   <div className="flex items-center">
-                    <Clock className="w-6 h-6 text-blue-600 mr-4" />
+                    <Clock className="w-6 h-6 text-[#7091E6] mr-4" />
                     <span>Mon - Fri, 9:00 AM - 6:00 PM</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                <h2 className="text-2xl font-bold mb-6 text-[#3D52A0]">Frequently Asked Questions</h2>
                 <div className="space-y-4">
                   {faqItems.map((faq, index) => (
                     <div
@@ -613,8 +615,8 @@ const Contact = () => {
                         onClick={() => toggleFAQ(index)}
                         className="flex items-center justify-between w-full text-left"
                       >
-                        <span className="text-lg font-medium">{faq.question}</span>
-                        {activeFAQ === index ? <ChevronUp /> : <ChevronDown />}
+                        <span className="text-lg font-medium text-[#3D52A0]">{faq.question}</span>
+                        {activeFAQ === index ? <ChevronUp className="text-[#7091E6]" /> : <ChevronDown className="text-[#7091E6]" />}
                       </button>
                       {activeFAQ === index && <p className="mt-2 text-gray-600">{faq.answer}</p>}
                     </div>
